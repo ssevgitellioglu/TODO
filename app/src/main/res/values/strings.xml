@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">TODO</string>
+    <string name="date">End Date</string>
+    <string name="task_name">Task Name</string>
+
+    <style name="TextLabel" parent="TextAppearance.AppCompat">
+        <item name="colorControlNormal">@color/white</item>
+        <item name="colorControlActivated">@color/white</item>
+        <item name="android:textColorHighlight">@color/white</item>
+        <item name="android:textColorLink">@color/white</item>
+    </style>
+</resources>

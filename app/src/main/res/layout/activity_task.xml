@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.TaskActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/addTaskAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@color/greenTea">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_task"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="@color/greenTea"
+            android:theme="@style/Theme.TODO">
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="32dp"
+            android:theme="@style/Theme.TODO"
+            app:backgroundTint="@null"
+            android:textColorHint="@color/white">
+
+            <EditText
+                android:id="@+id/etTaskName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="text"
+                android:textColorHighlight="@color/white"
+                android:textSize="30sp">
+
+            </EditText>
+        </com.google.android.material.textfield.TextInputLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fbTask"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_anchorGravity="bottom|end"
+        app:fabSize="normal"
+        app:layout_anchor="@id/addTaskAppBar"
+        android:src="@drawable/ic_done"
+        android:layout_margin="16dp">
+
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+        android:padding="32dp">
+        <LinearLayout
+            android:id="@+id/dateLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_date">
+
+            </ImageView>
+            <TextView
+                android:id="@+id/tvDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:hint="@string/date"
+                android:paddingStart="8dp"
+                android:layout_gravity="center_vertical">
+
+            </TextView>
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
